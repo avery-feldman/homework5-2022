@@ -1,0 +1,163 @@
+#logo{
+    width: 475px;
+    animation: zoom 5s;
+
+}
+
+@keyframes zoom{
+from {width: 25px;}
+to {width: 475px;}
+from {opacity: 0;}
+to {opacity: 1;}
+/* only while loaded? */
+}
+
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1; 
+/* backup color goes second? */
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+
+a:visited{
+    color:blue; /* is this all you want us to do? */
+
+}
+
+.card > header{
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding: 50px 0px;
+    border-radius: 50px 50px 0px 0px;
+
+}
+
+.card{
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+    
+}
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.gallery img{
+    border: 10px solid #50c7c7;
+    margin: 10px;
+    width: 300px;
+
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+@media screen and (min-width:900px){
+
+header{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav_links{
+    flex-direction: row;
+    
+}
+
+.card{
+    flex-basis: 275px;
+
+}
+
+.pricing{
+    flex-wrap: nowrap;   /* what else should i edit in .pricing */
+   
+}
+
+body > header{
+    position: sticky;
+    top: 0;
+    
+}
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    
+    #logo{
+        animation: none;
+
+    }
+
+}
+
+@media print { /* doesn't have three rows fix this */
+    
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+        
+    }
+
+    .nav_links{
+        flex-direction: row;
+        justify-content: space-evenly;
+         
+    }
+
+    nav{
+        width: 100%;
+
+    }
+
+    .pricing{
+        height: 100%;
+        flex-wrap: nowrap;
+     /* still need to do */
+
+    }
+
+    .card{
+        align-self: flex-end;
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+
+    }
+
+    #gallery, .gallery{
+        display:none;       
+
+    }
+
+    .card ul :nth-child(2)::after{
+        content: "👍";
+    }
+/* footer doesnt have background color */
+}
