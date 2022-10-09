@@ -9,14 +9,13 @@ from {width: 25px;}
 to {width: 475px;}
 from {opacity: 0;}
 to {opacity: 1;}
-/* only while loaded? */
+
 }
 
 body{
     font-family: "Poppins", serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1; 
-/* backup color goes second? */
 
 }
 
@@ -35,8 +34,8 @@ header{
 }
 
 a:visited, a:link{
-    color:blue; /* is this all you want us to do? */
-
+    color:blue; 
+    
 }
 
 .card > header{
@@ -97,7 +96,7 @@ header{
 }
 
 .pricing{
-    flex-wrap: nowrap;   /* what else should i edit in .pricing */
+    flex-wrap: nowrap;   
    
 }
 
@@ -159,5 +158,5 @@ body > header{
     .card ul :nth-child(2)::after{
         content: "👍";
     }
-/* footer doesnt have background color */
+
 }
