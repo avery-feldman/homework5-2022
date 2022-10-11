@@ -1,3 +1,4 @@
+/* Styles the logo id with the zoom animation written below */
 #logo{
     width: 475px;
     animation: zoom 5s;
@@ -12,6 +13,8 @@ to {opacity: 1;}
 
 }
 
+/* Selector that designates the body font and backup font, along 
+with background image and backup background color */
 body{
     font-family: "Poppins", serif;
     background-image: url("../images/concrete_seamless.png");
@@ -19,6 +22,8 @@ body{
 
 }
 
+/* Sets the header element and nav_links class to flex 
+to reflect the example page*/
 header{
     display: flex;
     flex-direction: column;
@@ -33,11 +38,14 @@ header{
 
 }
 
+/* Style links to have same color when visited and not yet clicked */
 a:visited, a:link{
     color:blue; 
     
 }
 
+/* Styles the card class and header within to reflect the example 
+page: setting the background color and border, rounds the corners */
 .card > header{
     background-color: #288088;
     border: 2px solid #45ADAD;
@@ -46,6 +54,8 @@ a:visited, a:link{
 
 }
 
+/* Style card and pricing class to reflect example and utilize flex - elements 
+put into columns, size, centering of elements, curving of border */
 .card{
     border-radius: 50px 50px 0px 0px;
     display: flex;
@@ -53,6 +63,7 @@ a:visited, a:link{
     flex-direction: column;
     
 }
+
 
 .pricing{
     display: flex;
@@ -62,6 +73,8 @@ a:visited, a:link{
 
 }
 
+/* Selectors to style images within the gallery class, and make 
+the gallery class utilize flex to reflect the example */
 .gallery img{
     border: 10px solid #50c7c7;
     margin: 10px;
@@ -77,9 +90,11 @@ a:visited, a:link{
     align-items: stretch;
 
 }
-
+/* Desktop view - media query */
 @media screen and (min-width:900px){
 
+/* Selectors to style header and nav_links class reflect the 
+example - farthest left and farthest right from one another*/
 header{
     flex-direction: row;
     justify-content: space-between;
@@ -90,6 +105,8 @@ header{
     
 }
 
+/* Selectors to style card and pricing class - size 
+change, stop wrapping of content */
 .card{
     flex-basis: 275px;
 
@@ -108,8 +125,10 @@ body > header{
 
 }
 
+/* Reduced motion media query */
 @media screen and (prefers-reduced-motion: reduce) {
-    
+
+/* Disables the animation of the logo */
     #logo{
         animation: none;
 
@@ -117,14 +136,16 @@ body > header{
 
 }
 
+/* print view media query */
 @media print { /* doesn't have three rows fix this */
-    
+/* Selector to remove background image and simplify font */
     body{
         font-family: Arial, Helvetica;
         background-image: none;
         
     }
 
+/* Selector to style navigation reflect example - even spacing */
     .nav_links{
         flex-direction: row;
         justify-content: space-evenly;
@@ -136,10 +157,11 @@ body > header{
 
     }
 
+ /* Selector to style pricing and card class reflect example - 
+ push content to end of page, add border style, change size */
     .pricing{
         height: 100%;
         flex-wrap: nowrap;
-     /* still need to do */
 
     }
 
@@ -150,11 +172,14 @@ body > header{
 
     }
 
+/* Remove gallery from print view */
     #gallery, .gallery{
         display:none;       
 
     }
 
+/* Add thumbs up emoji to the end of the second line of text within 
+each ul in the card class */
     .card ul :nth-child(2)::after{
         content: "👍";
     }
