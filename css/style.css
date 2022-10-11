@@ -23,7 +23,7 @@ body{
 }
 
 /* Sets the header element and nav_links class to flex 
-to reflect the example page*/
+to reflect the example page */
 header{
     display: flex;
     flex-direction: column;
